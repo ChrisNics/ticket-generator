@@ -8,7 +8,7 @@ const Ticket = ({ formData }) => {
         <p className="ml-10 text-xs">Jan 31, 2025 / Austin, TX</p>
       </div>
 
-      <div className="flex gap-x-3">
+      <div className="flex items-center gap-x-3">
         <div className="relative h-10 w-10 sm:h-14 sm:w-14">
           <Image
             className="rounded-lg"
@@ -18,8 +18,8 @@ const Ticket = ({ formData }) => {
           />
         </div>
 
-        <div className="flex flex-col text-xl">
-          <p>{formData.fullName}</p>
+        <div className="flex w-[200px] flex-col text-xl">
+          <p className="truncate">{formData.fullName}</p>
           <div className="flex items-center gap-x-1">
             <div className="h-[20px] w-[20px] bg-github bg-contain bg-no-repeat" />
             <p className="text-xs">{formData.githubUsername}</p>
@@ -28,7 +28,7 @@ const Ticket = ({ formData }) => {
       </div>
 
       <p className="absolute right-0 rotate-90 text-lg text-neutral-500">
-        #609123
+        {formData.ticketNumber}
       </p>
     </div>
   );

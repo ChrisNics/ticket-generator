@@ -13,6 +13,7 @@ const Index = () => {
     email: "",
     githubUsername: "",
     avatar: null,
+    ticketNumber: "",
     currentStep: 1,
   });
 

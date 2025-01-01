@@ -17,7 +17,11 @@ const Form = ({ formData, setFormData }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validateFields()) {
-      setFormData((prev) => ({ ...prev, currentStep: 2 }));
+      setFormData((prev) => ({
+        ...prev,
+        currentStep: 2,
+        ticketNumber: `#${Math.floor(Math.random() * 1000000)}`,
+      }));
       console.log("Form Submitted:", formData);
     }
   };
