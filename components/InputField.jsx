@@ -9,7 +9,7 @@ const InputField = ({ label, placeholder, value, onChange, error }) => {
         value={value} // Bind the value
         onChange={onChange} // Handle changes
         className={cn(
-          "rounded-lg border border-neutral-300/50 bg-neutral-700/30 p-2 outline-none",
+          "cursor-pointer rounded-lg border border-neutral-300/50 bg-neutral-700/30 p-2 outline-none hover:bg-neutral-500/50",
           {
             "border-orange-700": error, // Highlight border if there's an error
           },
@@ -17,7 +17,7 @@ const InputField = ({ label, placeholder, value, onChange, error }) => {
       />
       {error && (
         <div className="mt-2 flex gap-x-2 text-orange-700">
-          <div className="bg-info-red h-[16px] w-[16px] bg-center bg-no-repeat" />
+          <div className="h-[16px] w-[16px] bg-info-red bg-center bg-no-repeat" />
           <p className="text-xs text-orange-700">{error}</p>
         </div>
       )}

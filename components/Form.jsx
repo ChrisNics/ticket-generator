@@ -61,7 +61,7 @@ const Form = ({ formData, setFormData }) => {
   });
 
   return (
-    <form className="mx-auto max-w-xl" onSubmit={handleSubmit}>
+    <form className="relative z-50 mx-auto max-w-xl" onSubmit={handleSubmit}>
       <h1 className="max-w-lg text-center text-3xl font-extrabold lg:text-4xl">
         Your Journey to Coding Conf 2025 Starts Here!
       </h1>
